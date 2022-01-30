@@ -44,12 +44,12 @@ class Polygon {
 	}
 
 	public static void main(String[] args){
+		Scanner in = new Scanner(System.in);
 		Polygon polygon = new Polygon();
 		double sideLength = 1;
 
 		while(sideLength > 0){
 			System.out.print("Side length (0 when done): ");
-			Scanner in = new Scanner(System.in);
 			sideLength = in.nextDouble();
 
 			if(sideLength <= 0){
@@ -59,13 +59,23 @@ class Polygon {
 			polygon.addSide(sideLength);
 		}
 
-		int numSides = polygon.getSides();
+		System.out.print("Apothem: ");
+		double apothem = in.nextDouble();
+
+		/*
+
+		//Calculate the apothem
+
 		sideLength = polygon.getPerimeter()/numSides;
 		double apothem = sideLength/(2 * Math.tan(3.14/numSides));
-		double perimeter = polygon.getPerimeter();
 
-		System.out.printf("Apothem: %f\n", apothem);
+		*/
+
+		double perimeter = polygon.getPerimeter();
+		double area = polygon.getArea(apothem);
+		int numSides = polygon.getSides();
+
 		System.out.printf("Perimenter of %d-sided polygon is %f\n", numSides, perimeter);
-		System.out.printf("Area is %f\n", polygon.getArea(apothem));
+		System.out.printf("Area is %f\n", area);
 	}
 }
