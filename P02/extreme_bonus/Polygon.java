@@ -3,12 +3,12 @@
 
 
 + Yes, arrayLists are better for this project, 
-  since the array class cannot dynamically allocate memory. 
+  since traditional arrays cannot dynamically allocate memory. 
 
 + Although copying and pasting old arrays into new ones does work,
   It takes more time and memory to do so. 
 
-  
+
 
 */
 
