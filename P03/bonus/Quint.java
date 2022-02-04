@@ -5,8 +5,8 @@ class Quint {
 		Puzzle puzzle = new Puzzle(WordList.getWord());
 
 		System.out.println("=========\n"
-						 + "Q U I N T\n"
-						 + "=========\n");
+		                 + "Q U I N T\n"
+		                 + "=========\n");
 		System.out.print("Guess a 5-letter word\n" + 
 					     "guess ");
 
@@ -23,6 +23,7 @@ class Quint {
 				continue;
 			} catch(IndexOutOfBoundsException e){
 				System.out.print("      Index out of bounds!\n      ");
+				continue;
 			}
 
 			counter++;
