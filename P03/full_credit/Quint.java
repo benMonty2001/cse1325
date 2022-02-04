@@ -15,13 +15,9 @@ class Quint {
 		while(true){
 			Scanner in = new Scanner(System.in);
 			String guess = in.nextLine();
-			if(guess.length() != 5){
-				System.out.println("[GUESS NOT 5 LETTERS]");
-			} else {
-				System.out.print(puzzle.compareGuess(guess) + " ");
-				counter++;
-			}
-
+			System.out.print(puzzle.compareGuess(guess) + " ");
+			counter++;
+			
 			if(puzzle.isSolved()){
 				System.out.printf("Guessed in %d tries\n", counter);
 				break;

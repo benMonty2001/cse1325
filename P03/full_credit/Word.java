@@ -2,7 +2,8 @@ class Word {
 	private char[] letters;
 
 	public Word(String word){
-		this.letters = word.toCharArray();
+		word = word.toUpperCase();
+		letters = word.toCharArray();
 	}
 
 	public char charAt(int position){
