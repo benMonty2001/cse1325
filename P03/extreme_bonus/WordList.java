@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class WordList {
     public static String getWord() throws FileNotFoundException { 
-        File file = new File("wordlis.txt");
+        File file = new File("wordlist.txt");
 
         Scanner in = new Scanner(file);
 

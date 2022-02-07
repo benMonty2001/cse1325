@@ -1,8 +1,16 @@
+import java.io.FileNotFoundException;
+
 import java.util.Scanner;
 
 class Quint {
 	public static void main(String[] args) { 
-		Puzzle puzzle = new Puzzle(WordList.getWord());
+		Puzzle puzzle = new Puzzle("ERROR");
+
+		try{
+			puzzle = new Puzzle(WordList.getWord());
+		} catch(FileNotFoundException e) {
+			System.err.println("unable to load words from wordlist.txt");
+		}
 
 		System.out.println("=========\n"
 		                 + "Q U I N T\n"
