@@ -5,7 +5,6 @@ class Substitution implements Cypher {
 		return String.valueOf(message).indexOf(target.toString().toLowerCase());
 	}
 	public Substitution(String key){
-		System.out.println(key);
 		char[] newEncryptKey = key.toLowerCase().toCharArray();
 		char[] newDecryptKey = "abcdefghijklmnopqrstuvwxyz".toCharArray();
 		boolean goodKey = true;
