@@ -1,3 +1,4 @@
+package shelter;
 public class Fish extends Animal{
 	private FishBreed breed;
 

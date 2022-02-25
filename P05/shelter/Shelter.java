@@ -1,3 +1,4 @@
+package shelter;
 import java.util.ArrayList;
 
 public class Shelter {
@@ -10,6 +11,14 @@ public class Shelter {
 
 	public void addAnimal(Animal animal){
 		animals.add(animal);
+	}
+
+	public int numAnimal(){
+		return animals.size();
+	}
+
+	public Animal getAnimal(int index){
+		return animals.get(index);
 	}
 
 	@Override

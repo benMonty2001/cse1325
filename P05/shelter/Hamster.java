@@ -1,3 +1,4 @@
+package shelter;
 public class Hamster extends Animal{
 	private HamsterBreed breed;
 
