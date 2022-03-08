@@ -68,8 +68,6 @@ public class profileFrame extends JFrame {
 				//Breeds to ComboBox
 					//Fish
 					JComboBox fishBreedComboBox = new JComboBox(fishBreeds);
-					FishBreed fishBreed = FishBreed.valueOf(String.valueOf(fishBreedComboBox.getSelectedItem()));
-
 					//Hamster
 					JComboBox hamsterBreedComboBox = new JComboBox(hamsterBreeds);
 		
