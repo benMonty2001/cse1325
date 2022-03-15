@@ -28,6 +28,7 @@ public class Shelter {
 				}
 				case "Hamster" : {
 					this.addAnimal(new Hamster(bufferedReader));
+					break;
 				}
 			}
 		}

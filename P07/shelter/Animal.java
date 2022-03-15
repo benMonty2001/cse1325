@@ -35,16 +35,6 @@ public abstract class Animal {
 		bufferedWriter.write(this.gender + "\n");
 		bufferedWriter.write(this.age + "\n");
 	}
-	
-	public String getName() {
-		return this.name;
-	}
-	public String getGender() {
-		return this.gender.toString();
-	}
-	public int getAge() {
-		return this.age;
-	}
 
 	@Override
 	public String toString(){
