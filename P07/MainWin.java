@@ -64,7 +64,13 @@ public class MainWin extends JFrame{
 			menubar.add(file);
 				//New
 				JMenuItem newShelter = new JMenuItem("New");
-				newShelter.addActionListener(event -> onNewShelterClick());
+				newShelter.addActionListener(event -> {
+					try {
+						onNewShelterClick();
+					} catch(IOException e) {
+						System.out.println(e.getMessage());
+					}
+				});
 				file.add(newShelter);
 				//Open
 				JMenuItem open = new JMenuItem("Open");
@@ -211,7 +217,7 @@ public class MainWin extends JFrame{
 		int save = 0;
 
 		if(shelter.getNumAnimals() > 0) {
-			save = JOptionPane.showConfirmDialog(this, "Opening a new file will delete current changes! Do you wish to proceed?", "alert", JOptionPane.YES_NO_OPTION);
+			save = JOptionPane.showConfirmDialog(this, "Opening a new file will delete unsaved changes! Do you wish to proceed?", "alert", JOptionPane.YES_NO_OPTION);
 		}
 		
 		if(save == 1 || save == -1) {
@@ -251,9 +257,9 @@ public class MainWin extends JFrame{
 		this.updateDisplay();
 	}
 
-	public void onNewShelterClick() {
+	public void onNewShelterClick() throws IOException {
 		if(shelter.getNumAnimals() > 0) {
-			int result = JOptionPane.showConfirmDialog(this, "Creating a new file will delete current changes! Do you wish to proceed?", "alert", JOptionPane.YES_NO_OPTION);
+			int result = JOptionPane.showConfirmDialog(this, "Creating a new file will delete unsaved changes! Do you wish to proceed?", "alert", JOptionPane.YES_NO_OPTION);
 			
 			if(result == 1) {
 				return;
@@ -262,6 +268,7 @@ public class MainWin extends JFrame{
 
 		shelter = new Shelter("");
 		this.updateDisplay();
+		this.onSaveShelterAsClick();
 	}
 
 	public void updateDisplay() {
