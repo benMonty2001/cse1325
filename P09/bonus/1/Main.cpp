@@ -1,7 +1,5 @@
 #include "Color.h"
 
-#include <iostream>
-
 int main() {
 	Color red{255, 0, 0};
 	Color green{0, 255, 0};
@@ -20,6 +18,8 @@ int main() {
 	std::cin >> in_blue;  
 
 	Color custom{in_red, in_green, in_blue};
+	Color reset{};
 
-	std::cout << custom.colorize(custom.to_string()) << std::endl;
+	std::cout << custom << custom.to_string() << reset << std::endl;
+	std::cout << reset << reset.to_string() << std::endl;
 }
