@@ -1,8 +1,5 @@
 #include "Color.h"
 
-#include <string>
-#include <sstream>
-
 	Color::Color(int red, int green, int blue) : 
 		_red{red}, _green{green}, _blue{blue}, _reset{false} { }
 
@@ -28,7 +25,7 @@
 		}
 	}
 
-	std::ostream& operator << (std::ostream& ost, Color color) {
+	std::ostream& operator << (std::ostream& ost, const Color& color) {
 		if(!color._reset) {
 			ost << "\033[38;2;" << color._red << ";" << color._green << ";" << color._blue << "m";
 			return ost;

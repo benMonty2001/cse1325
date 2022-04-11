@@ -17,7 +17,7 @@ class Color {
 
 		std::string colorize(std::string text);
 
-		friend std::ostream& operator << (std::ostream& ost, Color color);
+		friend std::ostream& operator << (std::ostream& ost, const Color& color);
 };
 
 
