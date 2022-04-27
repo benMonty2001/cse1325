@@ -95,9 +95,9 @@ public class FindMinHash {
             threads[i].start();
         }
 
-        for(Thread thread : threads) {
+        for(int i = 0; i < numThreads; i++) {
             try {
-                thread.join();
+                threads[i].join();
             } catch (InterruptedException e) {
                 System.out.println("Interruption: " + e.getMessage());
             }
